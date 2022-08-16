@@ -1,5 +1,5 @@
 # Man-pdf
-> Creates and saves .pdf file of man output.
+> Creates and saves .pdf file from man output.
 
 - [Man-pdf](#man-pdf)
   * [Installation](#installation)
