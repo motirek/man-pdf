@@ -3,7 +3,7 @@
 # constants
 path="$HOME/ManPDF"
 
-helpText="$(basename "$0") [-h] [-c p s] -- Program to transfer man of command to .pdf file
+help_text="$(basename "$0") [-h] [-c p s] -- Program to transfer man of command to .pdf file
 
          -h   Show help
          -c   Command for man (will be used as name for new pdf)
@@ -13,7 +13,7 @@ helpText="$(basename "$0") [-h] [-c p s] -- Program to transfer man of command t
 
 if [ "$1" == "-h" ]
 then
-        echo "$helpText"
+        echo "$help_text"
         exit 0
 fi
 
