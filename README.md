@@ -1,11 +1,11 @@
+# Man-pdf
+> Creates and saves .pdf file of man output.
+
 - [Man-pdf](#man-pdf)
   * [Installation](#installation)
     + [Requires](#requires)
     + [Git Clone](#git-clone)
   * [Help](#help)
-
-# Man-pdf
-> Creates and saves .pdf file of man output.
 
 ## Installation
 
