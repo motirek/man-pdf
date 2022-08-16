@@ -1,5 +1,23 @@
-# man-pdf
-Script to transfer MAN of command to .PDF file
+- [Man-pdf](#man-pdf)
+  * [Installation](#installation)
+    + [Requires](#requires)
+    + [Git Clone](#git-clone)
+  * [Help](#help)
+
+# Man-pdf
+> Creates and saves .pdf file of man output.
+
+## Installation
+
+### Requires
+
+- man
+- ps2pdf
+- Zathura
+
+### Git Clone
+    git clone https://github.com/motirek/man-pdf.git
+## Help
 
     man-pdf [-h] [-c p s] -- Program to transfer man of command to .pdf file
 
