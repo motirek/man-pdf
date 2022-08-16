@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# constants
+path="$HOME/ManPDF"
+
+helpText="$(basename "$0") [-h] [-c p s] -- Program to transfer man of command to .pdf file
+
+         -h   Show help
+         -c   Command for man (will be used as name for new pdf)
+         -p   PDF path (default: $path)
+         -z   Show in Zathura
+"
+
+if [ "$1" == "-h" ]
+then
+        echo "$helpText"
+        exit 0
+fi
+
+while getopts ':c:p:z:' flag
+do
+        case "${flag}" in
+                c) cmd=${OPTARG};;
+                p) path=${OPTARG};;
+                z) show_zathura=${OPTARG};;
+                *) echo "Something went wrong!";;
+        esac
+done
+
+mkdir -p "$path"
+
+if [ -z "$cmd" ]
+then
+        echo "I don't know what you want to find!"
+        exit 1
+        fi
+
+if [[ "$show_zathura" -eq 1 && -n "$show_zathura" ]]
+then
+        man -t "$cmd" | ps2pdf - "$path/$cmd.pdf"  | zathura "$path/$cmd.pdf"
+else
+        man -t "$cmd" | ps2pdf - "$path/$cmd.pdf"
+fi
